@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: mzM3zDQ8k3JgUgxebVJuUCTZBbhOnF1IqcJrCSVtnQwx6US7rTPkyyb/3B7Uj6ve9hxkx/trtz3jv4jsltuo4C2Jis9BHaAyiHXg1P8LRrnvATcQ9i7UbbSj6p/Tb6nn06u9s8TCOliT20oKddQi/2PaEr/XQGWxjDaEcOv9pLM=
+  app: learn-rails-cf
+  on:
+    repo: cfleschhut/learn-rails
