@@ -16,13 +16,13 @@
       <%= render 'layouts/navigation' %>
     </header>
 
-    <main role="main">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
+    <main role="main" class="row">
+      <div class="large-12 columns">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
     </main>
 
-    <footer>
-      <%= render 'layouts/footer' %>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
