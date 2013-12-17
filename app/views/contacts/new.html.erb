@@ -1,12 +1,14 @@
 <% content_for :page_title, 'Contact' %>
 
-<h3>Contact</h3>
+<div class="small-12 columns">
+  <h3>Contact</h3>
 
-<div class="form">
-  <%= simple_form_for @contact do |form| %>
-  <%= form.input :name %>
-  <%= form.input :email %>
-  <%= form.input :content, as: :text %>
-  <%= form.button :submit, 'Submit', class: 'submit' %>
-  <% end %>
+  <div class="panel">
+    <%= simple_form_for @contact do |form| %>
+    <%= form.input :name %>
+    <%= form.input :email %>
+    <%= form.input :content, as: :text %>
+    <%= form.button :submit, 'Submit', class: 'submit' %>
+    <% end %>
+  </div>
 </div>

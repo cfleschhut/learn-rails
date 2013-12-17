@@ -1,6 +1,16 @@
-<h3>Home</h3>
-<p>Name: <%= @owner.name %></p>
-<p>Birthdate: <%= @owner.birthdate %></p>
-<p>Countdown: <%= @owner.countdown %></p>
+<div class="small-12 columns">
+  <div class="panel">
+    <h3>Home</h3>
+    <ul>
+      <li>Name: <%= @owner.name %></li>
+      <li>Birthdate: <%= @owner.birthdate %></li>
+      <li>Countdown: <%= @owner.countdown %></li>
+    </ul>
 
-<p><a href="#" class="button">Button</a></p>
+    <p>
+      <%= link_to 'About', page_path('about'), class: 'button' %>
+      <%= link_to 'Contact', new_contact_path, class: 'button secondary' %>
+    </p>
+  </div>
+</div>
+
