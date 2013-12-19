@@ -1,16 +1,19 @@
-<div class="small-12 columns">
+<% content_for :page_title, 'Home | Learn Rails' %>
+<% content_for :description, 'Lorem Ipsum dolor sit amet' %>
+
+<section>
   <div class="panel">
-    <h3>Home</h3>
-    <ul>
-      <li>Name: <%= @owner.name %></li>
-      <li>Birthdate: <%= @owner.birthdate %></li>
-      <li>Countdown: <%= @owner.countdown %></li>
-    </ul>
-
-    <p>
-      <%= link_to 'About', page_path('about'), class: 'button' %>
-      <%= link_to 'Contact', new_contact_path, class: 'button secondary' %>
-    </p>
+    <%= image_tag 'lorempixel.jpg' %>
   </div>
-</div>
 
+  <div class="large-offset-2 large-8 column">
+    <h2>Stay in touch!</h2>
+
+    <%= simple_form_for @visitor do |f| %>
+      <%= f.error_notification %>
+
+      <%= f.input :email, label: false, placeholder: 'Your email address…' %>
+      <%= f.button :submit, 'Sign up for the newsletter', class: 'submit' %>
+    <% end %>
+  </div>
+</section>
