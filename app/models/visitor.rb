@@ -14,7 +14,7 @@ class Visitor < ActiveRecord::Base
       email: {
         email: self.email
       },
-      double_optin: false,
+      double_optin: true,
       update_existing: true,
       send_welcome: true
     })
